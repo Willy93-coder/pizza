@@ -1,15 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Pizza pizza1 = new Pizza("margarita", "familiar");
-        System.out.println("Pizza 1: " + pizza1);
-        pizza1.sirve();
-        Pizza pizza2 = new Pizza("funghi", "mediana");
-        System.out.println("Pizza 2: " + pizza2);
-        pizza2.sirve();
-
-        Pizza pizza3 = new Pizza("Dos quesos", "petita");
-        System.out.println("Pizza 3: " + pizza3);
-
+        Pizza p1 = new Pizza("margarita", "mitjana");
+        Pizza p2 = new Pizza("funghi", "familiar");
+        p2.sirve();
+        Pizza p3 = new Pizza("quatre formatges", "mitjana");
+        System.out.println(p1);
+        System.out.println(p2);
+        System.out.println(p3);
+        p2.sirve();
         System.out.println("Pedidas: " + Pizza.getTotalDemanades());
         System.out.println("Servidas: " + Pizza.getTotalServides());
     }

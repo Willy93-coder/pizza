@@ -8,6 +8,7 @@ public class Pizza {
     private String ingrediente;
     private String tamanio;
     private String estado;
+    private int servida;
     private static int pedidas;
     private static int servidas;
 
@@ -18,7 +19,7 @@ public class Pizza {
     public Pizza(String ingrediente, String tamanio) {
         comprobarIngredientes(ingrediente);
         comprobarTamanio(tamanio);
-        this.estado = "pedida";
+        this.estado = "demanada";
         this.pedidas += 1;
     }
 
@@ -28,7 +29,13 @@ public class Pizza {
      * */
     public void sirve() {
         this.servidas += 1;
-        System.out.println("Esta pizza ya esta servida");
+        this.servida += 1;
+        if (servida == 1) {
+            System.out.println("Aquesta pizza ja s'ha servit");
+        }
+        if (servida > 1) {
+            System.out.println("La pizza no es pot servir perque s'ha servit abans");
+        }
     }
 
     public static int getTotalDemanades() {
